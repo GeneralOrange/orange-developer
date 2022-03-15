@@ -1,5 +1,23 @@
 .Home {
-  background-color: rgb(10, 10, 129);
+  background: {
+    image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    size: 400% 400%;
+  }
+  animation: backgroundAnimate 20s ease infinite;
+
+  @keyframes backgroundAnimate {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
   &__title {
     color: white;

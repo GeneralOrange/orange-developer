@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Container, Heading, Center } from '@chakra-ui/react'
 import Layout from '../components/Layout'
 import { Button } from '@chakra-ui/button'
-import { motion } from 'framer-motion'
+//import { motion } from 'framer-motion'
 import styles from '../styles/Home.module.scss'
 import Cube from '../components/Cube.js'
 
@@ -21,8 +21,9 @@ export default function Home() {
 
           <Container>
             <Center h='100vh'>
-                <Heading as='h1' size='4x1' fontSize='72' className={styles.Home__title}>
+                <Heading as='h1' size='4x1' fontSize='72' fontStyle='italic' textAlign='center' lineHeight='3' className={styles.Home__title}>
                   Hallo, mijn naam is 
+                    <br/>
                     <Link href='/over-mij/'>
                       <span>Erik</span>
                     </Link>

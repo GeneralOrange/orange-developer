@@ -1,12 +1,10 @@
 import '../styles/globals.scss'
 import Footer from '../components/Footer';
-import { motion } from 'framer-motion'
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
-      <Footer/>
     </>
       
   );
