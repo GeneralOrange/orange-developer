@@ -1,60 +1,41 @@
-.Home {
-  background: {
-    image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    size: 400% 400%;
+.hero {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  height: 100vh;
+  background: rgb(232, 230, 250);
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle {
+  font: {
+    size: 32px;
+    weight: bold;
   }
-  animation: backgroundAnimate 20s ease infinite;
+  color:rgb(87, 175, 253);
+}
 
-  @keyframes backgroundAnimate {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
+.title {
+  color: rgb(45, 45, 45);
+  font: {
+    size: 52px;
+    weight: normal;
   }
+}
 
-  &__title {
-    color: white;
-
-    span {
-      margin: 0 0 0 30px;
-      position: relative;
-      color: rgb(8, 19, 71);
-      cursor: pointer;
-      z-index: 1;
-
-      &:hover {
-        color: white;
-      }
-
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 50%;
-        left: 50%;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-      }
-
-      &::before {
-        z-index: -1;
-        transform: translate(-50%, 50%);
-        background-color: rgb(5, 109, 45);
-      }
-
-      &::after {
-        z-index: -2;
-        transform: translate(-51%, 51%);
-        background-color: rgba(0, 0 , 0, 1);
-      }
-    }
+.button {
+  text-align: center;
+  color: white;
+  background-color: rgb(87, 175, 253);
+  border-radius: 6px;
+  padding: 10px 30px;
+  border: 0;
+  font: {
+    weight: bolder;
+    size: 20px;
   }
+  box-shadow: 0 17px 14px 0 rgba(0, 0, 0, 0.17);
+  cursor: pointer;
 }
