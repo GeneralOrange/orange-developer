@@ -9,15 +9,22 @@
   align-items: center;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
 .subtitle {
   font: {
     size: 32px;
     weight: bold;
   }
   color:rgb(87, 175, 253);
+  text-align: right;
 }
 
 .title {
+  text-align: right;
   color: rgb(45, 45, 45);
   font: {
     size: 52px;
@@ -26,6 +33,7 @@
 }
 
 .button {
+  align-self: flex-end;
   text-align: center;
   color: white;
   background-color: rgb(87, 175, 253);
