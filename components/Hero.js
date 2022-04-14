@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Typed from 'typed.js'
+import FadeRightToLeft from './FadeRightToLeft'
+import FadeLeftToRight from './FadeLeftToRight'
 import styles from '../styles/Hero.module.scss'
 
 export default function Hero() {
@@ -30,27 +32,31 @@ export default function Hero() {
         <div className={styles.hero}>
             <div className='container'>
                 <div className={styles.heroWrapper}>
-                    <div className={styles.section}>
-                        <Image
-                            src="/profile.png"
-                            width="434"
-                            height="575"/>
-                    </div>
-                    <div className={styles.section}>
-                        <Image
-                            className={styles.logo}
-                            src="/generalOrangeLogo.png"
-                            width="50"
-                            height="50"/>
-                        <span className={styles.subtitle}>Hallo, mijn naam is Erik</span>
-                        <h1 className={styles.title}>
-                            Ik ben een <br/> <span ref={el}/>
-                        </h1>
-                        <button
-                            className={styles.button}>
-                            Contact
-                        </button>
-                    </div>
+                    <FadeLeftToRight>
+                        <div className={styles.section}>
+                            <Image
+                                src="/profile.png"
+                                width="434"
+                                height="575"/>
+                        </div>
+                    </FadeLeftToRight>
+                    <FadeRightToLeft>
+                        <div className={styles.section}>
+                            <Image
+                                className={styles.logo}
+                                src="/generalOrangeLogo.png"
+                                width="50"
+                                height="50"/>
+                            <span className={styles.subtitle}>Hallo, mijn naam is Erik</span>
+                            <h1 className={styles.title}>
+                                Ik ben een <br/> <span ref={el}/>
+                            </h1>
+                            {/* <button
+                                className={styles.button}>
+                                Contact
+                            </button> */}
+                        </div>
+                    </FadeRightToLeft>
                 </div>
             </div>
         </div>
