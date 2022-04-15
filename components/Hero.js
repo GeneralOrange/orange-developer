@@ -35,6 +35,7 @@ export default function Hero() {
                     <FadeLeftToRight>
                         <div className={styles.section}>
                             <Image
+                                className={styles.profile}
                                 src="/profile.png"
                                 width="434"
                                 height="575"/>
@@ -51,10 +52,6 @@ export default function Hero() {
                             <h1 className={styles.title}>
                                 Ik ben een <br/> <span ref={el}/>
                             </h1>
-                            {/* <button
-                                className={styles.button}>
-                                Contact
-                            </button> */}
                         </div>
                     </FadeRightToLeft>
                 </div>

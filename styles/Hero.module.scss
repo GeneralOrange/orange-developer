@@ -15,17 +15,25 @@
     min-height: 100%;
     width: 100%;
     background-image: linear-gradient(45deg, rgb(0, 128, 107), rgb(2, 219, 2));
-    clip-path: ellipse(60% 65% at 100% 50%);
+    clip-path: ellipse(160% 100% at 50% -25%);
+
+    @media screen and (min-width: 1200px){
+      clip-path: ellipse(60% 65% at 100% 50%);
+    }
   }
 }
 
 .heroWrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 30px;
   width: 100%;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 1200px){
+    flex-direction: row;
+  }
 }
 
 .section {
@@ -35,7 +43,18 @@
 
   &:last-of-type {
     align-items: flex-end;
-    min-width: 500px;
+
+    @media screen and (min-width: 1200px){
+      min-width: 500px;
+    }
+  }
+}
+
+.profile {
+  display: none!important;
+
+  @media screen and (min-width: 1200px){
+    display: block!important;
   }
 }
 
@@ -57,20 +76,4 @@
     size: 52px;
     weight: bold;
   }
-}
-
-.button {
-  align-self: flex-end;
-  text-align: center;
-  color: white;
-  background-color: rgb(252, 172, 68);
-  border-radius: 6px;
-  padding: 10px 30px;
-  border: 0;
-  font: {
-    weight: bolder;
-    size: 20px;
-  }
-  box-shadow: 0 17px 14px 0 rgba(0, 0, 0, 0.17);
-  cursor: pointer;
 }
