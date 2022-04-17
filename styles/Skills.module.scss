@@ -15,15 +15,34 @@
     align-items: center;
 }
 
-.section {
+.skillsGraph {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.underline {
+    min-height: 30px;
+    width: 100%;
+    background-color: rgb(255, 173, 66);
+}
+
+.graphSection {
     display: flex;
     flex-direction: column;
     z-index: 1;
+    align-items: center;
+    min-width: 500px;
+    gap: 5px;
+}
 
-    &:last-of-type {
-        align-items: flex-end;
-        min-width: 500px;
-    }
+.textSection {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    min-width: 500px;
+    align-items: flex-end;
 }
 
 .subtitle {
@@ -31,13 +50,13 @@
         size: 32px;
         weight: bold;
     }
-    color:rgb(255, 173, 66);
+    color:rgb(0, 128, 107);
     text-align: right;
 }
 
 .title {
     text-align: right;
-    color: white;
+    color: rgb(255, 173, 66);
     line-height: 1;
     margin: 0 0 30px;
     font: {
@@ -48,7 +67,7 @@
 
 .description {
     text-align: right;
-    color: white;
+    color: rgb(45, 45, 45);
     font: {
         size: 14px;
         weight: normal;

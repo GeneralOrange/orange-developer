@@ -16,7 +16,7 @@ export default function Personal() {
                             <span className={styles.title}>Dit is mijn verhaal</span>                    
                             <div className={styles.description}>
                                 Ik woon samen met m’n vriendin en dochter in een appartement in Zoetermeer. Tegenwoordig loop ik graag een rondje door de wijk met z’n 3tjes. 
-                                Verder zijn mijn hobby’s gamen en films kijken.
+                                Of ga ik een rondje fietsen met m’n vader. Ik ben ook vooral een Marvel fan, vind het leuk om naar de film te gaan. 
                             </div>
                         </div>
                     </FadeLeftToRight>

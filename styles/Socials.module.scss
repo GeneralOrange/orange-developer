@@ -1,0 +1,55 @@
+.socials {
+    position: relative;
+    background-color: rgb(232, 230, 250);
+    padding: 20px 0;
+    border-radius: 6px;
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 50px;
+        background-color: rgb(255, 173, 66);
+    }
+
+    &::before {
+        top: -50%;
+    }
+
+    &::after {
+        bottom: -50%;
+    }
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    
+    li {
+        list-style-type: none;
+    }
+}
+
+.linkedin,
+.github,
+.mail { 
+    font: {
+        size: 30px;
+    }
+}
+
+.linkedin {
+    color: rgb(0, 112, 192);
+}
+
+.mail {
+    color: rgb(45, 45, 45);
+}

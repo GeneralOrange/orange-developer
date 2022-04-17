@@ -1,0 +1,16 @@
+.chart {
+    position: relative;
+    background-color: rgb(0, 128, 107);
+    width: 40px;
+}
+
+.name {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%) rotate(-90deg);
+    font: {
+        size: 14px;
+        weight: bolder;
+    }
+}
