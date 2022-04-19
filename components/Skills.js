@@ -60,8 +60,10 @@ export default function Skills() {
                     <FadeLeftToRight>
                         <div className={styles.graphSection}>
                             <div className={styles.skillsGraph}>
-                                {skillData.map(skill => (
-                                    <SkillChart skill={skill}/>
+                                {skillData.map((skill, index) => (
+                                    <SkillChart
+                                        key={index}
+                                        skill={skill}/>
                                 ))}
                             </div>
                             <div className={styles.underline}></div>

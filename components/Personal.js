@@ -24,6 +24,7 @@ export default function Personal() {
                         <div className={styles.section}>
                             <Image
                                 src="/profile.png"
+                                alt="Profiel foto"
                                 width="434"
                                 height="575"/>
                         </div>

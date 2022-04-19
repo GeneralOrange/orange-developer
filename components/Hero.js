@@ -37,6 +37,7 @@ export default function Hero() {
                             <Image
                                 className={styles.profile}
                                 src="/profile.png"
+                                alt="Profiel foto"
                                 width="434"
                                 height="575"/>
                         </div>
@@ -46,6 +47,7 @@ export default function Hero() {
                             <Image
                                 className={styles.logo}
                                 src="/generalOrangeLogo.png"
+                                alt="Mijn logo"
                                 width="50"
                                 height="50"/>
                             <span className={styles.subtitle}>Hallo, mijn naam is Erik</span>

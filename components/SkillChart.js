@@ -30,7 +30,7 @@ export default function SkillChart({ skill }) {
                 }
             })
         }
-    },[inView]);
+    },[inView, animation, skill.grade, skill.color]);
 
     return (
         <div className={styles.chart}>

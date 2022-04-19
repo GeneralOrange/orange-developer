@@ -29,7 +29,7 @@ const FadeRightToLeft = ({ children }) => {
                 }
             })
         }
-    }, [inView]);
+    }, [inView, animation]);
 
     return (
         <>
