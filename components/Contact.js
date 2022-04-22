@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import FadeLeftToRight from './FadeLeftToRight'
 import FadeRightToLeft from './FadeRightToLeft'
+import { FaDownload, FaPaperPlane } from 'react-icons/fa'
 import styles from '../styles/Contact.module.scss'
 
 export default function Contact() {
@@ -118,15 +120,27 @@ export default function Contact() {
                     className={styles.field}
                     placeholder="Typ hier uw bericht..."/>
                 </div>
-                <input
-                  type="submit"
-                  className={styles.submit}
-                  disabled={status.submitting}
-                  value={!status.submitting
-                    ? !status.submitted
-                    ? 'Verstuur'
-                    : 'Verstuurd'
-                    : 'Versturen...'}/>
+                <div className={styles.group}>
+                  <button
+                    type="submit"
+                    className={styles.submit}
+                    disabled={status.submitting}>
+                      {!status.submitting
+                        ? !status.submitted
+                        ? 'Verstuur'
+                        : 'Verstuurd'
+                        : 'Versturen...'}
+                      <FaPaperPlane/>
+                  </button>
+                  <Link 
+                    href='/CV.pdf'>
+                    <a 
+                      target="_blank"
+                      className={styles.download}>
+                      Download CV <FaDownload/>
+                    </a>
+                  </Link>
+                </div>
               </form>
               {status.info.error && (
                 <div className={styles.danger}>{status.info.msg}</div>
