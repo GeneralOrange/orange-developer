@@ -1,13 +1,13 @@
 const sgMail = require('@sendgrid/mail')
 
 export default async function(req, res) {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const { name, email, subject, message, to_adres } = req.body
 
   const content = {
     to: to_adres,
-    from: `ContactForm OrangeDeveloper.nl <${email}>`,
+    from: `ContactForm OrangeDeveloper.nl <noreply@orange-developer.nl>`,
     subject: `${name} zoekt contact over: ${subject}`,
     text: message,
     html: `<p>
