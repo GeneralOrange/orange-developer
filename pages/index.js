@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import Personal from '../components/Personal'
 import Skills from '../components/Skills'
 import Socials from '../components/Socials'
+import BackToTop from '../components/BackToTop'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 import styles from '../styles/Home.module.scss'
@@ -69,7 +70,6 @@ export default function Home(){
 
         <ParallaxLayer
           offset={4}
-          //onClick={() => ref.current.scrollTo(0)}
           style={{
             backgroundColor: 'rgb(255, 173, 66)'
           }} >
@@ -81,7 +81,7 @@ export default function Home(){
           speed={.00005}
           style={{
             minHeight: '100px',
-            top: '50vh',
+            top: 'calc(50vh - (187px / 2))',
             left: '10px',
             width: '80px'
           }}
