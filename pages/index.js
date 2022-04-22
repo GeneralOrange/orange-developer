@@ -4,6 +4,8 @@ import Hero from '../components/Hero'
 import Personal from '../components/Personal'
 import Skills from '../components/Skills'
 import Socials from '../components/Socials'
+import Projects from '../components/Projects'
+import Contact from '../components/Contact'
 import styles from '../styles/Home.module.scss'
 import { FaChevronDown } from 'react-icons/fa'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
@@ -50,9 +52,6 @@ export default function Home(){
           offset={2}
           speed={.005}
           onClick={() => ref.current.scrollTo(3)}
-          style={{
-            //backgroundColor: 'rgb(255, 173, 66)'
-          }}
           >
           <Skills/>
           <FaChevronDown className={styles.down}/>
@@ -64,18 +63,17 @@ export default function Home(){
           style={{
             backgroundColor: 'rgb(0, 128, 107)'
           }} >
-          <h2>Projecten</h2>
+          <Projects/>
           <FaChevronDown className={styles.down}/>
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={4}
-          onClick={() => ref.current.scrollTo(0)}
+          //onClick={() => ref.current.scrollTo(0)}
           style={{
             backgroundColor: 'rgb(255, 173, 66)'
           }} >
-          <h2>Contact</h2>
-          <FaChevronDown className={styles.down}/>
+          <Contact/>
         </ParallaxLayer>
         <ParallaxLayer
           sticky={{ start: 1, end: 3}}

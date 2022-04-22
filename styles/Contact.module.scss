@@ -1,0 +1,92 @@
+.contact {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.title {
+    font: {
+        size: 40px;
+        weight: bolder;
+    }
+    color: white;
+    margin: 0;
+}
+
+.description {
+    color: white;
+    margin: 0 0 15px;
+}
+
+.column {
+    width: 100%;
+
+    @media screen and (min-width: 992px){
+        width: calc(50% - 15px);
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formGroup {
+    
+}
+
+.field {
+    width: 100%;
+    padding: 13px 25px;
+    border-radius: 6px;
+    border: 0;
+    box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.12);
+
+    &:focus {
+        outline: 2px solid rgb(0, 128, 107);
+    }
+}
+
+.submit {
+    width: fit-content;
+    background-color: rgb(0, 128, 107);
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.12);
+    color: white;
+    font: {
+        weight: bold;
+        size: 14px;
+    }
+    cursor: pointer;
+}
+
+.danger,
+.success {
+    color: white;
+    padding: 15px 30px;
+    border-radius: 6px;
+    margin: 15px 0 0;
+}
+
+.danger {
+    background-color: rgb(255, 84, 84);
+}
+
+.success {
+    background-color: rgb(65, 255, 65);
+}
