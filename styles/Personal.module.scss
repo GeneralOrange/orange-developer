@@ -22,7 +22,11 @@
 
     &:first-of-type {
         align-items: flex-start;
-        min-width: 500px;
+        min-width: 100%;
+
+        @media screen and (min-width: 992px){
+            min-width: 500px;
+        }
     }
 }
 
