@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-const FadeLeftToRight = ({ children }) => {
+const FadeLeftToRight = (props) => {
     
     const {ref, inView} = useInView();
     const animation = useAnimation();
@@ -32,18 +32,17 @@ const FadeLeftToRight = ({ children }) => {
     }, [inView, animation]);
 
     return (
-        <>
-            <motion.div
-                ref={ref}
-                initial={{ 
-                    opacity: 0,
-                    x: -200
-                }}
-                animate={animation}
-                >
-                    {children}
-            </motion.div>
-        </>
+        <motion.div
+            className={props.className}
+            ref={ref}
+            initial={{ 
+                opacity: 0,
+                x: -200
+            }}
+            animate={animation}
+            >
+                {props.children}
+        </motion.div>
     )
 }
 

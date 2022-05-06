@@ -1,17 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { isMobile, isDesktop } from 'react-device-detect'
 import styles from '../styles/SkillChart.module.scss'
 
 export default function SkillChart({ skill }) {
 
     const {ref, inView} = useInView();
     const animation = useAnimation();
+    const [chartHeight, setChartHeight] = useState(25);
 
     useEffect(()=>{
+        if(isMobile){
+            setChartHeight(12);
+        }
+
+        if(isDesktop){
+            setChartHeight(25);
+        }
+
         if(inView){
             animation.start({
-                height: `${skill.grade * 25}px`,
+                height: `${skill.grade * chartHeight}px`,
                 opacity: 1,
                 backgroundColor: skill.color,
                 transition: {

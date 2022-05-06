@@ -8,11 +8,16 @@
 
 .skillsWrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
+    padding: 30px;
     gap: 30px;
     width: 100%;
     justify-content: center;
     align-items: center;
+
+    @media screen and (min-width: 1200px){
+        flex-direction: row;
+    }
 }
 
 .skillsGraph {
@@ -23,9 +28,13 @@
 }
 
 .underline {
-    min-height: 30px;
+    min-height: 15px;
     width: 100%;
     background-color: rgb(255, 173, 66);
+
+    @media screen and (min-width: 1200px) {
+        min-height: 30px;
+    }
 }
 
 .graphSection {
@@ -33,16 +42,23 @@
     flex-direction: column;
     z-index: 1;
     align-items: center;
-    min-width: 500px;
     gap: 5px;
+
+    @media screen and (min-width: 1200px){
+        min-width: 500px;
+    }
 }
 
 .textSection {
     display: flex;
     flex-direction: column;
     z-index: 1;
-    min-width: 500px;
-    align-items: flex-end;
+    align-items: flex-start;
+
+    @media screen and (min-width: 1200px){
+        align-items: flex-end;
+        min-width: 500px;
+    }
 }
 
 .subtitle {
@@ -51,25 +67,38 @@
         weight: bold;
     }
     color:rgb(0, 128, 107);
-    text-align: right;
+    text-align: left;
+
+    @media screen and (min-width: 1200px){
+        text-align: right;
+    }
 }
 
 .title {
-    text-align: right;
+    text-align: left;
     color: rgb(255, 173, 66);
     line-height: 1;
-    margin: 0 0 30px;
+    margin: 0 0 15px;
     font: {
         size: 52px;
         weight: bold;
     }
+
+    @media screen and (min-width: 1200px){
+        text-align: right;
+        margin: 0 0 30px;
+    }
 }
 
 .description {
-    text-align: right;
+    text-align: left;
     color: rgb(45, 45, 45);
     font: {
         size: 14px;
         weight: normal;
+    }
+
+    @media screen and (min-width: 1200px){
+        text-align: right;
     }
 }

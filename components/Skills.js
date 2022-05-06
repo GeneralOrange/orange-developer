@@ -57,25 +57,21 @@ export default function Skills() {
         <div className={styles.skills}>
             <div className='container'>
                 <div className={styles.skillsWrapper}>
-                    <FadeLeftToRight>
-                        <div className={styles.graphSection}>
-                            <div className={styles.skillsGraph}>
-                                {skillData.map((skill, index) => (
-                                    <SkillChart
-                                        key={index}
-                                        skill={skill}/>
-                                ))}
-                            </div>
-                            <div className={styles.underline}></div>
+                    <FadeLeftToRight className={styles.graphSection}>
+                        <div className={styles.skillsGraph}>
+                            {skillData.map((skill, index) => (
+                                <SkillChart
+                                    key={index}
+                                    skill={skill}/>
+                            ))}
                         </div>
+                        <div className={styles.underline}></div>
                     </FadeLeftToRight>
-                    <FadeRightToLeft>
-                        <div className={styles.textSection}>
-                            <span className={styles.subtitle}>Skills</span>
-                            <span className={styles.title}>Wat kan ik?</span>                    
-                            <div className={styles.description}>
-                                Op de grafiek hiernaast zie je een vertoning van de skills die ik bezit.
-                            </div>
+                    <FadeRightToLeft className={styles.textSection}>
+                        <span className={styles.subtitle}>Skills</span>
+                        <span className={styles.title}>Wat kan ik?</span>                    
+                        <div className={styles.description}>
+                            Op de grafiek hiernaast zie je een vertoning van de skills die ik bezit.
                         </div>
                     </FadeRightToLeft>
                 </div>

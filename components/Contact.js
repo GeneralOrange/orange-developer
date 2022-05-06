@@ -5,6 +5,7 @@ import FadeLeftToRight from './FadeLeftToRight'
 import FadeRightToLeft from './FadeRightToLeft'
 import { FaDownload, FaPaperPlane } from 'react-icons/fa'
 import styles from '../styles/Contact.module.scss'
+import { BrowserView } from 'react-device-detect'
 
 export default function Contact() {
   const [status, setStatus] = useState({
@@ -151,13 +152,15 @@ export default function Contact() {
             </FadeLeftToRight>
           </div>
           <div className={styles.column}>
-            <FadeRightToLeft>
-              <Image
-                src="/profile.png"
-                alt="Profiel foto"
-                width="434"
-                height="575"/>
-            </FadeRightToLeft>
+            <BrowserView>
+                <FadeRightToLeft>
+                  <Image
+                    src="/profile.png"
+                    alt="Profiel foto"
+                    width="434"
+                    height="575"/>
+                </FadeRightToLeft>
+            </BrowserView>
           </div>
         </div>
       </div>

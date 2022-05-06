@@ -7,7 +7,7 @@ export default function Socials() {
   return (
     <div className={styles.socials}>
         <ul className={styles.list}>
-            <li>
+            <li className={styles.linkedinList}>
                 <Link
                     href="https://www.linkedin.com/in/erik-van-der-schaaf-202674167/">
                         <a
@@ -17,7 +17,7 @@ export default function Socials() {
                         </a>
                 </Link>
             </li>
-            <li>
+            <li className={styles.githubList}>
                 <Link
                     href="https://github.com/GeneralOrange">
                         <a
@@ -27,7 +27,7 @@ export default function Socials() {
                         </a>
                 </Link>
             </li>
-            <li>
+            <li className={styles.emailList}>
                 <Link
                     href="mailto:erik.17021995@gmail.com">
                         <a

@@ -2,24 +2,27 @@
     position: relative;
     background-color: rgb(232, 230, 250);
     padding: 20px 0;
-    border-radius: 6px;
-    &::before,
-    &::after {
-        position: absolute;
-        content: '';
-        left: 50%;
-        transform: translateX(-50%);
-        width: 1px;
-        height: 50px;
-        background-color: rgb(255, 173, 66);
-    }
 
-    &::before {
-        top: -50%;
-    }
-
-    &::after {
-        bottom: -50%;
+    @media screen and (min-width: 1200px){
+        border-radius: 6px;
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 50px;
+            background-color: rgb(255, 173, 66);
+        }
+    
+        &::before {
+            top: -50%;
+        }
+    
+        &::after {
+            bottom: -50%;
+        }
     }
 }
 
@@ -29,13 +32,53 @@
     display: flex;
     gap: 15px;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-direction: row;
     width: auto;
+
+    &::before,
+    &::after {
+        content: "";
+        border: 1px solid #d3d3d3;
+        align-self: stretch;
+    }
+
+    &::before {
+        order: 1;
+    }
+
+    &::after {
+        order: 3;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-direction: column;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
     
     li {
         list-style-type: none;
+
+        @media screen and (min-width: 1200px) {
+            
+        }
     }
+}
+
+.linkedinList {
+    order: 0;
+}
+
+.githubList {
+    order: 2;
+}
+
+.emailList {
+    order: 4;
 }
 
 .linkedin,

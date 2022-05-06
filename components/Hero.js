@@ -32,29 +32,25 @@ export default function Hero() {
         <div className={styles.hero}>
             <div className='container'>
                 <div className={styles.heroWrapper}>
-                    <FadeLeftToRight>
-                        <div className={styles.section}>
-                            <Image
-                                className={styles.profile}
-                                src="/profile.png"
-                                alt="Profiel foto"
-                                width="434"
-                                height="575"/>
-                        </div>
+                    <FadeLeftToRight className={styles.section}> 
+                        <Image
+                            className={styles.profile}
+                            src="/profile.png"
+                            alt="Profiel foto"
+                            width="280"
+                            height="375"/>
                     </FadeLeftToRight>
-                    <FadeRightToLeft>
-                        <div className={styles.section}>
-                            <Image
-                                className={styles.logo}
-                                src="/generalOrangeLogo.png"
-                                alt="Mijn logo"
-                                width="50"
-                                height="50"/>
-                            <span className={styles.subtitle}>Hallo, mijn naam is Erik</span>
-                            <h1 className={styles.title}>
-                                Ik ben een <br/> <span ref={el}/>
-                            </h1>
-                        </div>
+                    <FadeRightToLeft className={styles.section}>
+                        <Image
+                            className={styles.logo}
+                            src="/generalOrangeLogo.png"
+                            alt="Mijn logo"
+                            width="50"
+                            height="50"/>
+                        <span className={styles.subtitle}>Hallo, mijn naam is Erik</span>
+                        <h1 className={styles.title}>
+                            Ik ben een <br/> <span ref={el}/>
+                        </h1>
                     </FadeRightToLeft>
                 </div>
             </div>

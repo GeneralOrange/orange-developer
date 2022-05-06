@@ -10,24 +10,20 @@ export default function Personal() {
         <div className={styles.personal}>
             <div className='container'>
                 <div className={styles.personalWrapper}>
-                    <FadeLeftToRight>
-                        <div className={styles.section}>
-                            <span className={styles.subtitle}>Persoonlijk</span>
-                            <span className={styles.title}>Dit is mijn verhaal</span>                    
-                            <div className={styles.description}>
-                                Ik woon samen met m’n vriendin en dochter in een appartement in Zoetermeer. Tegenwoordig loop ik graag een rondje door de wijk met z’n 3tjes. 
-                                Of ga ik een rondje fietsen met m’n vader. Ik ben ook vooral een Marvel fan, vind het leuk om naar de film te gaan. 
-                            </div>
+                    <FadeLeftToRight className={styles.section}> 
+                        <span className={styles.subtitle}>Persoonlijk</span>
+                        <span className={styles.title}>Dit is mijn verhaal</span>                    
+                        <div className={styles.description}>
+                            Ik woon samen met m’n vriendin en dochter in een appartement in Zoetermeer. Tegenwoordig loop ik graag een rondje door de wijk met z’n 3tjes. 
+                            Of ga ik een rondje fietsen met m’n vader. Ik ben ook vooral een Marvel fan, vind het leuk om naar de film te gaan. 
                         </div>
                     </FadeLeftToRight>
-                    <FadeRightToLeft>
-                        <div className={styles.section}>
-                            <Image
-                                src="/profile.png"
-                                alt="Profiel foto"
-                                width="434"
-                                height="575"/>
-                        </div>
+                    <FadeRightToLeft className={styles.section}>
+                        <Image
+                            src="/profile.png"
+                            alt="Profiel foto"
+                            width="434"
+                            height="575"/>
                     </FadeRightToLeft>
                 </div>
             </div>

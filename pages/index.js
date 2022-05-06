@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Head from 'next/head'
 import Hero from '../components/Hero'
 import Personal from '../components/Personal'
@@ -10,9 +10,43 @@ import Contact from '../components/Contact'
 import styles from '../styles/Home.module.scss'
 import { FaChevronDown } from 'react-icons/fa'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { isMobile, isDesktop } from 'react-device-detect'
 
 export default function Home(){
   const ref = useRef(null);
+  const [socialStyling, setSocialStyling] = useState(
+    {
+      minHeight: '100px',
+      top: 'calc(50vh - (187px / 2))',
+      left: '10px',
+      width: '80px'
+    }
+  );
+
+  useEffect(()=>{
+    if(isMobile){
+      setSocialStyling(
+        {
+          minHeight: '100px',
+          top: '0',
+          left: '0',
+          width: '100%',
+          height: '0'
+        }
+      ); 
+    }
+
+    if(isDesktop){
+      setSocialStyling(
+        {
+          minHeight: '100px',
+          top: 'calc(50vh - (187px / 2))',
+          left: '10px',
+          width: '80px'
+        }
+      );
+    }
+  },[isMobile, isDesktop])
 
   return (
     <>
@@ -75,19 +109,24 @@ export default function Home(){
           }} >
           <Contact/>
         </ParallaxLayer>
+        
         <ParallaxLayer
           sticky={{ start: 1, end: 3}}
           offset={1}
           speed={.00005}
-          style={{
-            minHeight: '100px',
-            top: 'calc(50vh - (187px / 2))',
-            left: '10px',
-            width: '80px'
-          }}
+          style={socialStyling}
           >
           <Socials/>
         </ParallaxLayer>
+        
+        {/* <MobileView>
+          <ParallaxLayer
+            sticky={{ start: 1, end: 3}}
+            offset={1}
+            speed={.00005}>
+            test123
+          </ParallaxLayer>
+        </MobileView> */}
       </Parallax>
     </>
   )
