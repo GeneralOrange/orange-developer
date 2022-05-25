@@ -151,17 +151,6 @@ export default function Contact() {
               )}
             </FadeLeftToRight>
           </div>
-          <div className={styles.column}>
-            <BrowserView>
-                <FadeRightToLeft>
-                  <Image
-                    src="/profile.png"
-                    alt="Profiel foto"
-                    width="434"
-                    height="575"/>
-                </FadeRightToLeft>
-            </BrowserView>
-          </div>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import FadeRightToLeft from './FadeRightToLeft'
 import FadeLeftToRight from './FadeLeftToRight'
+import ImageWrapper from './DecorativeWrapper'
 import styles from '../styles/Personal.module.scss'
 
 export default function Personal() {
@@ -14,16 +15,20 @@ export default function Personal() {
                         <span className={styles.subtitle}>Persoonlijk</span>
                         <span className={styles.title}>Dit is mijn verhaal</span>                    
                         <div className={styles.description}>
-                            Ik woon samen met m’n vriendin en dochter in een appartement in Zoetermeer. Tegenwoordig loop ik graag een rondje door de wijk met z’n 3tjes. 
-                            Of ga ik een rondje fietsen met m’n vader. Ik ben ook vooral een Marvel fan, vind het leuk om naar de film te gaan. 
+                            Ik woon samen met m’n vriendin en dochter in een appartement in Zoetermeer. <br/>
+                            Tegenwoordig (sinds eind februari) loop ik graag een rondje door de wijk met z’n 3tjes, lekker genieten van het mooie weer en samen een gezinnetje zijn. <br/>  
+                            Aan de andere kant probeer ik ook sportief te blijven en ga ik een rondje fietsen met m’n vader of ben ik te vinden op de tennisbaan. <br/>
+                            Als het gaat om hobbies hou ik er vooral van om lekker naar de film te gaan of om te gamen met vrienden.
                         </div>
                     </FadeLeftToRight>
                     <FadeRightToLeft className={styles.section}>
-                        <Image
-                            src="/profile.png"
-                            alt="Profiel foto"
-                            width="434"
-                            height="575"/>
+                        <ImageWrapper>
+                            <Image
+                                src="/profile_forest_flexing.jpeg"
+                                alt="Profiel foto in het bos"
+                                width="365"
+                                height="483"/>
+                        </ImageWrapper>
                     </FadeRightToLeft>
                 </div>
             </div>

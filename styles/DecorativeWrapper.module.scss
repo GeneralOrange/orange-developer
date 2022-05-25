@@ -1,0 +1,14 @@
+.container {
+    position: relative;
+}
+
+.decoration {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 20px solid rgb(255, 173, 66);
+    z-index: -1;
+}

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Typed from 'typed.js'
 import FadeRightToLeft from './FadeRightToLeft'
 import FadeLeftToRight from './FadeLeftToRight'
+import ImageWrapper from './DecorativeWrapper'
 import styles from '../styles/Hero.module.scss'
 
 export default function Hero() {
@@ -13,12 +14,14 @@ export default function Hero() {
     useEffect(()=> {
         const options = {
             strings: [
-                '<span style="color: rgb(45, 45, 45)">Leuke</span> ^200Developer',
-                '<span style="color: rgb(45, 45, 45)">Creatieve</span> ^200Developer',
-                '<span style="color: rgb(45, 45, 45)">Front-end</span> ^200Developer'
+                '<span style="color: rgb(45, 45, 45)">WordPress</span>',
+                '<span style="color: rgb(45, 45, 45)">PHP</span>',
+                '<span style="color: rgb(45, 45, 45)">JavaScript</span>',
+                '<span style="color: rgb(45, 45, 45)">Creatieve</span>',
+                '<span style="color: rgb(45, 45, 45)">Front-end</span>'
             ],
-            typeSpeed: 150,
-            backSpeed: 100
+            typeSpeed: 100,
+            backSpeed: 50
         };
 
         typed.current = new Typed(el.current, options);
@@ -32,13 +35,16 @@ export default function Hero() {
         <div className={styles.hero}>
             <div className='container'>
                 <div className={styles.heroWrapper}>
-                    <FadeLeftToRight className={styles.section}> 
-                        <Image
-                            className={styles.profile}
-                            src="/profile.png"
-                            alt="Profiel foto"
-                            width="280"
-                            height="375"/>
+                    <FadeLeftToRight className={styles.section}>
+                        <ImageWrapper>
+                            <Image
+                                className={styles.profile}
+                                src="/profile_forest.jpeg"
+                                alt="Profiel foto in het bos"
+                                priority={true}
+                                width="280"
+                                height="375"/>
+                        </ImageWrapper>
                     </FadeLeftToRight>
                     <FadeRightToLeft className={styles.section}>
                         <Image
@@ -49,7 +55,7 @@ export default function Hero() {
                             height="50"/>
                         <span className={styles.subtitle}>Hallo, mijn naam is Erik</span>
                         <h1 className={styles.title}>
-                            Ik ben een <br/> <span ref={el}/>
+                            Ik ben een <br/> <span ref={el}/> Developer
                         </h1>
                     </FadeRightToLeft>
                 </div>

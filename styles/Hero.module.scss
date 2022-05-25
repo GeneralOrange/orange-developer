@@ -46,14 +46,6 @@
   flex-direction: column;
   z-index: 1;
 
-  // &:first-of-type {
-  //   & > span {
-  //     @media screen and (max-width: 1199px){
-  //       display: none!important;
-  //     }
-  //   }
-  // }
-
   &:last-of-type {
     align-items: flex-start;
     min-width: 100%;
