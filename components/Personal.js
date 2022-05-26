@@ -24,6 +24,7 @@ export default function Personal() {
                     <FadeRightToLeft className={styles.section}>
                         <ImageWrapper>
                             <Image
+                                priority={true}
                                 src="/profile_forest_flexing.jpeg"
                                 alt="Profiel foto in het bos"
                                 width="365"

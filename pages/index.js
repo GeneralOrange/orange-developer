@@ -94,12 +94,13 @@ export default function Home(){
 
         <ParallaxLayer
           offset={3}
-          onClick={() => ref.current.scrollTo(4)}
           style={{
             backgroundColor: 'rgb(0, 128, 107)'
           }} >
           <Projects/>
-          <FaChevronDown className={styles.down}/>
+          <FaChevronDown
+            onClick={() => ref.current.scrollTo(4)}
+            className={styles.down}/>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -118,15 +119,6 @@ export default function Home(){
           >
           <Socials/>
         </ParallaxLayer>
-        
-        {/* <MobileView>
-          <ParallaxLayer
-            sticky={{ start: 1, end: 3}}
-            offset={1}
-            speed={.00005}>
-            test123
-          </ParallaxLayer>
-        </MobileView> */}
       </Parallax>
     </>
   )

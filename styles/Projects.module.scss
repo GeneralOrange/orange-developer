@@ -3,16 +3,38 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     width: 100%;
     padding: 30px;
+
+    @media screen and (min-width: 1200px) {
+        height: 100vh;
+    }
 }
 
 .title {
+    text-align: left;
+    color: white;
+    line-height: 1.2;
+    margin: 0 0 30px;
     font: {
-        weight: bolder;
-        size: 50px;
+        size: 52px;
+        weight: bold;
     }
-    color: rgb(255, 173, 66);
-    text-align: center;
+}
+
+.subtitle {
+    font: {
+        size: 32px;
+        weight: bold;
+    }
+    line-height: 1.2;
+    color:rgb(255, 173, 66);
+    text-align: left;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
 }

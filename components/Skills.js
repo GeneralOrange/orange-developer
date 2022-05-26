@@ -71,7 +71,8 @@ export default function Skills() {
                         <span className={styles.subtitle}>Skills</span>
                         <span className={styles.title}>Wat kan ik?</span>                    
                         <div className={styles.description}>
-                            Op de grafiek hiernaast zie je een vertoning van de skills die ik bezit.
+                            In de grafiek hiernaast zie je een vertoning van de skills die ik bezit. <br/>
+                            Verder zijn er ook nog verschildende tools waar ik mee kan werken.
                         </div>
                     </FadeRightToLeft>
                 </div>
