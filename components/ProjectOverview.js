@@ -53,7 +53,7 @@ export default function ProjectOverview() {
         {
             id: 4,
             name: 'Verzekerdtewerk.nl',
-            description: 'Een side project waar ik met een vriend aan gewerkt heb, hij deed teksen en ik de tech. Als je iets te weten wil komen over klussen kan je het vinden om onze website.',
+            description: 'Een side project waar ik met een kennis aan gewerkt heb, hij deed teksen en ik de tech. Als je iets te weten wil komen over klussen kan je het vinden om onze website.',
             stack: [
                 'Strapi',
                 'API',
@@ -78,7 +78,7 @@ export default function ProjectOverview() {
         {
             id: 6,
             name: 'Gamekoopjes',
-            description: 'Samen met een vriend heb ik aan dit side project gewerkt. Het zou een platform worden voor games en zouden hier affiliate marketing op runnen, met allerlei informatie over deze games.',
+            description: 'Samen met een kennis heb ik aan dit side project gewerkt. Het zou een platform worden voor games en zouden hier affiliate marketing op runnen, met allerlei informatie over deze games.',
             stack: [
                 'WordPress',
                 'Custom Theme',
