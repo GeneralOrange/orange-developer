@@ -63,6 +63,30 @@ export default function ProjectOverview() {
             url: 'https://verzekerdtewerk-nextjs.vercel.app/',
             repo: 'https://github.com/GeneralOrange/verzekerdtewerk-nextjs',
             image: '/verzekerdtewerk.png'
+        },
+        {
+            id: 5,
+            name: 'WebScraper',
+            description: 'Om bepaalde informatie binnen te halen voor games. Heb ik een webscraper gebouwt die naar een index kijkt van een aantal games en deze ophaald en vervolgens opslaat in een JSON format.',
+            stack: [
+                'NodeJS',
+                'Puppeteer'
+            ],
+            repo: 'https://github.com/GeneralOrange/webscraper/',
+            image: '/general-orange-background.jpg'
+        },
+        {
+            id: 6,
+            name: 'Gamekoopjes',
+            description: 'Samen met een vriend heb ik aan dit side project gewerkt. Het zou een platform worden voor games en zouden hier affiliate marketing op runnen, met allerlei informatie over deze games.',
+            stack: [
+                'WordPress',
+                'Custom Theme',
+                'PHP',
+                'JavaScript'
+            ],
+            repo: 'https://github.com/GeneralOrange/gamekoopjes',
+            image: '/general-orange-background.jpg'
         }
     ]
 

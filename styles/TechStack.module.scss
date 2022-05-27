@@ -2,7 +2,7 @@
     position: absolute;
     width: 70px;
     height: 100%;
-    background-color: rgb(66, 135, 246);
+    background-color: rgb(255, 173, 66);
     right: 0;
     top: 0;
     padding: 0;
@@ -21,10 +21,11 @@
     }
 
     &:nth-child(even){
-        background-color: rgb(255, 173, 66);
+        background-color: rgb(66, 135, 246);
+        background-color: rgb(0, 128, 107);
     }
 
     &:nth-child(odd){
-        background-color: rgb(66, 135, 246);
+        background-color: rgb(255, 173, 66);
     }
 }
