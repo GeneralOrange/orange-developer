@@ -1,18 +1,15 @@
 import React, { useRef, useEffect, useState } from 'react'
 import Head from 'next/head'
-import Hero from '../components/Hero'
-import Personal from '../components/Personal'
-import Skills from '../components/Skills'
 import Socials from '../components/Socials'
-import BackToTop from '../components/BackToTop'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
+import BackToHome from '../components/BackToHome'
 import styles from '../styles/Home.module.scss'
 import { FaChevronDown } from 'react-icons/fa'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { isMobile, isDesktop } from 'react-device-detect'
 
-export default function Home(){
+export default function ProjectsPage(){
   const ref = useRef(null);
   const [socialStyling, setSocialStyling] = useState(
     {
@@ -51,69 +48,34 @@ export default function Home(){
   return (
     <>
       <Head>
-        <title>Orange Developer | Erik van der Schaaf</title>
-        <meta name="description" content="Front-end Developer" />
+        <title>Projecten | Orange Developer | Erik van der Schaaf</title>
+        <meta name="description" content="Projecten" />
         <link rel="icon" href="/generalOrangeLogo.png" />
       </Head>
       <Parallax 
-        pages={5} 
+        pages={3} 
         ref={ref}>
 
-        <ParallaxLayer 
-          speed={0} 
-          factor={1} 
-          style={{
-            backgroundColor: 'rgb(232, 230, 250)'
-          }}
-          onClick={() => ref.current.scrollTo(1)}
-          >
-          <Hero />
-          <FaChevronDown className={styles.down}/>
-        </ParallaxLayer>
-
-        <ParallaxLayer 
-          offset={1} 
-          speed={1}
-          onClick={() => ref.current.scrollTo(2)}
-          style={{
-            backgroundColor: 'rgb(0, 128, 107)'
-          }} 
-          factor={1}>
-          <Personal/>
-          <FaChevronDown className={styles.down}/>
-        </ParallaxLayer>
-
         <ParallaxLayer
-          offset={2}
-          speed={.005}
-          onClick={() => ref.current.scrollTo(3)}
-          >
-          <Skills/>
-          <FaChevronDown className={styles.down}/>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={3}
+          factor={2}
           style={{
             backgroundColor: 'rgb(0, 128, 107)'
           }} >
-          <Projects show={3} toScreen={true} />
-          <FaChevronDown
-            onClick={() => ref.current.scrollTo(4)}
-            className={styles.down}/>
+            <BackToHome/>
+            <Projects show={-1} />
+            
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={4}
-          style={{
-            backgroundColor: 'rgb(255, 173, 66)'
-          }} >
+            offset={2}
+            style={{
+                backgroundColor: 'rgb(255, 173, 66)'
+            }} >
           <Contact/>
         </ParallaxLayer>
         
         <ParallaxLayer
-          sticky={{ start: 1, end: 3}}
-          offset={1}
+          sticky={{ start: 0, end: 1}}
           speed={.00005}
           style={socialStyling}
           >

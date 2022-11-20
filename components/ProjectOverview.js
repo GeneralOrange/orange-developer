@@ -1,10 +1,13 @@
 import React from 'react'
 import ProjectItem from './ProjectItem'
+import FadeFromButtonUp from './FadeFromBottomUp'
+import { FaChevronRight } from 'react-icons/fa'
 import styles from '../styles/ProjectOverview.module.scss'
+import Link from 'next/link';
 
-export default function ProjectOverview() {
+export default function ProjectOverview( props ) {
 
-    const items = [
+    let items = [
         {
             id: 1,
             name: 'Crypto-valuta.nl',
@@ -53,7 +56,7 @@ export default function ProjectOverview() {
         {
             id: 4,
             name: 'Verzekerdtewerk.nl',
-            description: 'Een side project waar ik met een kennis aan gewerkt heb, hij deed teksen en ik de tech. Als je iets te weten wil komen over klussen kan je het vinden om onze website.',
+            description: 'Een side project waar ik met een kennis aan gewerkt heb, hij deed teksen en ik de tech. Als je iets te weten wil komen over klussen kan je het vinden om deze website.',
             stack: [
                 'Strapi',
                 'API',
@@ -78,7 +81,7 @@ export default function ProjectOverview() {
         {
             id: 6,
             name: 'Gamekoopjes',
-            description: 'Samen met een kennis heb ik aan dit side project gewerkt. Het zou een platform worden voor games en zouden hier affiliate marketing op runnen, met allerlei informatie over deze games.',
+            description: 'Samen met een vriend heb ik aan dit side project gewerkt. Het zou een platform worden voor games en zouden hier affiliate marketing op runnen, met allerlei informatie over deze games.',
             stack: [
                 'WordPress',
                 'Custom Theme',
@@ -87,14 +90,55 @@ export default function ProjectOverview() {
             ],
             repo: 'https://github.com/GeneralOrange/gamekoopjes',
             image: '/general-orange-background.jpg'
+        },
+        {
+            id: 7,
+            name: 'Meali',
+            description: 'Samen met een vriend ben ik bezig met die side project. Het is een platform voor het reviewen van restaurants/gerechten.',
+            stack: [
+                'Laravel',
+                'PHP',
+                'Alpine.js',
+                'TailwindCSS'
+            ],
+            repo: 'https://github.com/GeneralOrange/meail-web',
+            image: '/meali.jpeg'
+        },
+        {
+            id: 8,
+            name: 'Ewmaterialen',
+            description: 'Een webshop voor het verkopen van bepaalde items.',
+            stack: [
+                'WordPress',
+                'PHP',
+                'Woo Commerce',
+                'UnderStrap',
+                'JavaScript'
+            ],
+            image: '/ewmaterialen.png',
+            url: 'http://test.ewmaterialen.nl'
         }
-    ]
+    ];
+
+    if (props.show !== -1){
+        items = items.slice(0, props.show);
+    }
 
     return (
-        <div className={styles.wrapper}>
+        <div className={ styles.wrapper }>
             { items.map((item, index) => (
                 <ProjectItem key={index} item={item} index={index} />
             ))}
+
+            { props.show !== -1 && 
+                <FadeFromButtonUp>
+                    <Link href="/projecten">
+                        <a className={styles.button}>
+                            Meer projecten <FaChevronRight />
+                        </a>
+                    </Link>
+                </FadeFromButtonUp>
+            }
         </div>
     )
 }
