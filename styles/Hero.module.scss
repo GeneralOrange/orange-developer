@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   z-index: 1;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: flex-start;
   overflow: visible;
@@ -59,7 +59,7 @@
 
 .subtitle {
   font: {
-    size: 32px;
+    size: 24px;
     weight: bold;
   }
   color:rgb(255, 173, 66);
@@ -67,6 +67,7 @@
 
   @media screen and (min-width: 1200px){
     text-align: right;
+    font-size: 32px;
   }
 }
 
@@ -78,11 +79,16 @@
   line-height: 1;
   margin: 0 0 30px;
   font: {
-    size: 52px;
+    size: 34px;
     weight: bold;
   }
 
   @media screen and (min-width: 1200px){
     text-align: right;
+    font-size: 52px;
   }
+}
+
+.profileMobile {
+  border-radius: 10px;
 }

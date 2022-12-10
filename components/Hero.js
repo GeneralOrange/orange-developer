@@ -4,6 +4,7 @@ import Typed from 'typed.js'
 import FadeRightToLeft from './FadeRightToLeft'
 import FadeLeftToRight from './FadeLeftToRight'
 import ImageWrapper from './DecorativeWrapper'
+import { BrowserView, mobileModel, MobileView } from 'react-device-detect'
 import styles from '../styles/Hero.module.scss'
 
 export default function Hero() {
@@ -35,17 +36,34 @@ export default function Hero() {
         <div className={styles.hero}>
             <div className='container'>
                 <div className={styles.heroWrapper}>
+                    
                     <FadeLeftToRight className={styles.section}>
+
+                        <BrowserView>
+                            <ImageWrapper>
+                                <Image
+                                    className={styles.profile}
+                                    src="/profile_forest.jpeg"
+                                    alt="Profiel foto in het bos"
+                                    priority={true}
+                                    width="280"
+                                    height="375"/>
+                            </ImageWrapper>
+                        </BrowserView>
+
+                        <MobileView>
                         <ImageWrapper>
-                            <Image
-                                className={styles.profile}
+                            <Image 
+                                className={styles.profileMobile}
                                 src="/profile_forest.jpeg"
                                 alt="Profiel foto in het bos"
                                 priority={true}
-                                width="280"
-                                height="375"/>
-                        </ImageWrapper>
+                                width="190"
+                                height="254"/>
+                                </ImageWrapper>
+                        </MobileView>
                     </FadeLeftToRight>
+                    
                     <FadeRightToLeft className={styles.section}>
                         <Image
                             className={styles.logo}

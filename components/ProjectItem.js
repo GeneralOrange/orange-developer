@@ -51,23 +51,30 @@ export default function ProjectItem(props) {
                 x: 0
             }}
             animate={animation}>
+
             { item.image && <img className={styles.image} src={item.image} alt={item.name} /> }
+
             <span className={styles.name}>{item.name}</span>
+
             <div className={styles.description}>
                 {item.description}
                 <TechStack stack={item.stack}/>
             </div>
+
             <div className={styles.buttons}>
+
                 { item.url && <Link href={item.url}>
                     <a target="_blank" rel="nofollow noopener" className={styles.button}>
                         Naar Website <FaChevronRight/>
                     </a>
                 </Link> }
+                
                 { item.repo && <Link href={item.repo}>
                     <a target="_blank" rel="nofollow noopener" className={styles.repoButton}>
                         Naar Repo <FaServer/>
                     </a>
                 </Link> }
+
             </div>
         </motion.div>   
     )

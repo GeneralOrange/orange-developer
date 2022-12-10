@@ -55,6 +55,7 @@ export default function Home(){
         <meta name="description" content="Front-end Developer" />
         <link rel="icon" href="/generalOrangeLogo.png" />
       </Head>
+
       <Parallax 
         pages={5} 
         ref={ref}>
@@ -67,8 +68,11 @@ export default function Home(){
           }}
           onClick={() => ref.current.scrollTo(1)}
           >
+
           <Hero />
+
           <FaChevronDown className={styles.down}/>
+
         </ParallaxLayer>
 
         <ParallaxLayer 
@@ -79,17 +83,24 @@ export default function Home(){
             backgroundColor: 'rgb(0, 128, 107)'
           }} 
           factor={1}>
+
           <Personal/>
+
           <FaChevronDown className={styles.down}/>
+
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={2}
           speed={.005}
-          onClick={() => ref.current.scrollTo(3)}
           >
+
           <Skills/>
-          <FaChevronDown className={styles.down}/>
+
+          <FaChevronDown
+            onClick={() => ref.current.scrollTo(3)}
+            className={styles.down}/>
+
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -97,10 +108,16 @@ export default function Home(){
           style={{
             backgroundColor: 'rgb(0, 128, 107)'
           }} >
-          <Projects show={3} toScreen={true} />
+
+          <Projects 
+            show={3} 
+            mobileShow={2} 
+            toScreen={true} />
+
           <FaChevronDown
             onClick={() => ref.current.scrollTo(4)}
             className={styles.down}/>
+
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -108,7 +125,9 @@ export default function Home(){
           style={{
             backgroundColor: 'rgb(255, 173, 66)'
           }} >
+
           <Contact/>
+
         </ParallaxLayer>
         
         <ParallaxLayer
@@ -117,8 +136,11 @@ export default function Home(){
           speed={.00005}
           style={socialStyling}
           >
+
           <Socials/>
+
         </ParallaxLayer>
+
       </Parallax>
     </>
   )

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import FadeLeftToRight from './FadeLeftToRight'
-import FadeRightToLeft from './FadeRightToLeft'
+import FadeFromButtonUp from './FadeFromBottomUp'
 import { FaDownload, FaPaperPlane } from 'react-icons/fa'
 import styles from '../styles/Contact.module.scss'
 import { BrowserView } from 'react-device-detect'
@@ -44,7 +43,6 @@ export default function Contact() {
   }
 
   const handleFormChange = e => {
-    //e.persists()
     setInputs(prev => ({
       ...prev,
       [e.target.id]: e.target.value
@@ -72,15 +70,22 @@ export default function Contact() {
 
   return (
     <div className={styles.contact}>
+
       <div className='container'>
+
         <div className={styles.wrapper}>
+
           <div className={styles.column}>
+
             <FadeLeftToRight>
               <h2 className={styles.title}>Contact</h2>
+              
               <p className={styles.description}>
                 Mocht je contact zoeken, kan dat via dit formulier.
               </p>
+
               <form className={styles.form} onSubmit={handleSubmit}>
+
                 <div className={styles.group}>
                   <input
                     id="name"
@@ -91,6 +96,7 @@ export default function Contact() {
                     className={styles.field}
                     placeholder="Uw Naam"/>
                 </div>
+
                 <div className={styles.group}>
                   <input
                     id="email"
@@ -101,6 +107,7 @@ export default function Contact() {
                     className={styles.field}
                     placeholder="Uw Email"/>
                 </div>
+
                 <div className={styles.group}>
                   <input
                     id="subject"
@@ -111,6 +118,7 @@ export default function Contact() {
                     className={styles.field}
                     placeholder="Het Onderwerp"/>
                 </div>
+
                 <div className={styles.group}>
                   <textarea
                     id="message"
@@ -121,38 +129,51 @@ export default function Contact() {
                     className={styles.field}
                     placeholder="Typ hier uw bericht..."/>
                 </div>
-                <div className={styles.group}>
-                  <button
-                    type="submit"
-                    className={styles.submit}
-                    disabled={status.submitting}>
-                      {!status.submitting
-                        ? !status.submitted
-                        ? 'Verstuur'
-                        : 'Verstuurd'
-                        : 'Versturen...'}
-                      <FaPaperPlane/>
-                  </button>
-                  <Link 
-                    href='/CV_erik.pdf'>
-                    <a 
-                      target="_blank"
-                      className={styles.download}>
-                      Download CV <FaDownload/>
-                    </a>
-                  </Link>
-                </div>
+                
+                <FadeFromButtonUp>
+
+                  <div className={styles.group}>
+                    <button
+                      type="submit"
+                      className={styles.submit}
+                      disabled={status.submitting}>
+                        {!status.submitting
+                          ? !status.submitted
+                          ? 'Verstuur'
+                          : 'Verstuurd'
+                          : 'Versturen...'}
+                        <FaPaperPlane/>
+                    </button>
+
+                    <Link 
+                      href='/CV_erik.pdf'>
+                      <a 
+                        target="_blank"
+                        className={styles.download}>
+                        Download CV <FaDownload/>
+                      </a>
+                    </Link>
+                  </div>
+
+                </FadeFromButtonUp>
+
               </form>
+
               {status.info.error && (
                 <div className={styles.danger}>{status.info.msg}</div>
               )}
+
               {!status.info.error && status.info.msg && (
                 <div className={styles.success}>{status.info.msg}</div>
               )}
+
             </FadeLeftToRight>
           </div>
+
         </div>
+
       </div>
+
     </div>
   )
 }

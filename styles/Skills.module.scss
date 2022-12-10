@@ -14,6 +14,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
     @media screen and (min-width: 1200px){
         flex-direction: row;
@@ -63,7 +64,7 @@
 
 .subtitle {
     font: {
-        size: 32px;
+        size: 24px;
         weight: bold;
     }
     color:rgb(0, 128, 107);
@@ -71,6 +72,7 @@
 
     @media screen and (min-width: 1200px){
         text-align: right;
+        font-size: 32px;
     }
 }
 
@@ -80,13 +82,14 @@
     line-height: 1;
     margin: 0 0 15px;
     font: {
-        size: 52px;
+        size: 34px;
         weight: bold;
     }
 
     @media screen and (min-width: 1200px){
         text-align: right;
         margin: 0 0 30px;
+        font-size: 52px;
     }
 }
 
@@ -100,5 +103,30 @@
 
     @media screen and (min-width: 1200px){
         text-align: right;
+    }
+}
+
+.button {
+    display: flex;
+    gap: 5px;
+    min-height: 45px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0 0;
+    background-color: rgb(255, 173, 66);
+    padding: 10px 40px;
+    border-radius: 25px;
+    border: 0;
+    box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.12);
+    color: white;
+    font: {
+        weight: bold;
+        size: 14px;
+    }
+    cursor: pointer;
+
+    @media screen and (min-width: 1200px) {
+        width: fit-content;
     }
 }

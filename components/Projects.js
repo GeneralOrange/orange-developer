@@ -17,7 +17,7 @@ export default function Projects( props ) {
             <ProjectOverview show={ props.show } />
           </BrowserView>
           <MobileView>
-            <h2>Mobile view word nog aan gewerkt.</h2>
+            <ProjectOverview show={ props.mobileShow } />
           </MobileView>
         </div>
       </div>

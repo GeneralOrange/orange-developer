@@ -1,7 +1,7 @@
 .contact {
     position: relative;
     z-index: 1;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: visible;
@@ -19,11 +19,15 @@
 
 .title {
     font: {
-        size: 40px;
+        size: 34px;
         weight: bolder;
     }
     color: white;
     margin: 0;
+
+    @media screen and (min-width: 1200px){
+        font-size: 52px;
+    }
 }
 
 .description {

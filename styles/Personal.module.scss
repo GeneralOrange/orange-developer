@@ -33,11 +33,15 @@
 
 .subtitle {
     font: {
-        size: 32px;
+        size: 24px;
         weight: bold;
     }
     color:rgb(255, 173, 66);
     text-align: left;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 32px;
+    }
 }
 
 .title {
@@ -46,8 +50,12 @@
     line-height: 1;
     margin: 0 0 30px;
     font: {
-        size: 52px;
+        size: 34px;
         weight: bold;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 52px;
     }
 }
 

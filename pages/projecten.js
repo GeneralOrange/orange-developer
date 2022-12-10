@@ -11,39 +11,6 @@ import { isMobile, isDesktop } from 'react-device-detect'
 
 export default function ProjectsPage(){
   const ref = useRef(null);
-  const [socialStyling, setSocialStyling] = useState(
-    {
-      minHeight: '100px',
-      top: 'calc(50vh - (187px / 2))',
-      left: '10px',
-      width: '80px'
-    }
-  );
-
-  useEffect(()=>{
-    if(isMobile){
-      setSocialStyling(
-        {
-          minHeight: '100px',
-          top: '0',
-          left: '0',
-          width: '100%',
-          height: '0'
-        }
-      ); 
-    }
-
-    if(isDesktop){
-      setSocialStyling(
-        {
-          minHeight: '100px',
-          top: 'calc(50vh - (187px / 2))',
-          left: '10px',
-          width: '80px'
-        }
-      );
-    }
-  },[isMobile, isDesktop])
 
   return (
     <>
@@ -62,7 +29,7 @@ export default function ProjectsPage(){
             backgroundColor: 'rgb(0, 128, 107)'
           }} >
             <BackToHome/>
-            <Projects show={-1} />
+            <Projects show={-1} mobileShow={-1} />
             
         </ParallaxLayer>
 
@@ -74,13 +41,6 @@ export default function ProjectsPage(){
           <Contact/>
         </ParallaxLayer>
         
-        <ParallaxLayer
-          sticky={{ start: 0, end: 1}}
-          speed={.00005}
-          style={socialStyling}
-          >
-          <Socials/>
-        </ParallaxLayer>
       </Parallax>
     </>
   )
