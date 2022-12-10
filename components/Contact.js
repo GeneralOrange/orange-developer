@@ -134,7 +134,7 @@ export default function Contact() {
                       <FaPaperPlane/>
                   </button>
                   <Link 
-                    href='/CV.pdf'>
+                    href='/CV_erik.pdf'>
                     <a 
                       target="_blank"
                       className={styles.download}>

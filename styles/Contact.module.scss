@@ -50,6 +50,12 @@
     align-items: center;
     gap: 10px;
 
+    textarea,
+    input {
+        font-family: -apple-system, Mukta, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    }
+
     &:last-of-type {
         flex-direction: column;
 
