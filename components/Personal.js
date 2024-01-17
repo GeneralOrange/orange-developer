@@ -15,9 +15,9 @@ export default function Personal() {
                         <span className={styles.subtitle}>Persoonlijk</span>
                         <span className={styles.title}>Dit is mijn verhaal</span>                    
                         <div className={styles.description}>
-                            Ik woon samen met m’n verloofde en dochter in een appartement in Zoetermeer. <br/>
-                            Tegenwoordig (sinds eind februari 2022) loop ik graag een rondje door de wijk met z’n 3tjes, lekker genieten van het mooie weer en samen een gezinnetje zijn. <br/>  
-                            Aan de andere kant probeer ik ook sportief te blijven en ga ik een rondje fietsen met m’n vader of ben ik te vinden op de tennisbaan. <br/>
+                            Ik woon sinds 2023 in Waddinxveen, maar ben opgegroeid in Ter Aar. <br/>
+                            Hier heb ik veel vrienden wonen waar ik graag een biertje mee drink. <br/>
+                            Aan de andere kant probeer ik ook sportief te blijven en ga ik een rondje fietsen met m’n vader of ben ik te vinden in de sportschool. <br/>
                             Als het gaat om hobbies hou ik er vooral van om lekker naar de film te gaan of om te gamen met vrienden.
                         </div>
                     </FadeLeftToRight>
