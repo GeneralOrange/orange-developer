@@ -7,6 +7,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "dependencies": {
     "@react-spring/parallax": "^9.7.5",
     "@sendgrid/mail": "^8.1.4",
