@@ -146,12 +146,10 @@ export default function Contact() {
                     </button>
 
                     <Link 
-                      href='/CV_erik.pdf'>
-                      <a 
-                        target="_blank"
-                        className={styles.download}>
+                      href='/CV_erik.pdf'
+                      target="_blank"
+                      className={styles.download}>
                         Download CV <FaDownload/>
-                      </a>
                     </Link>
                   </div>
 

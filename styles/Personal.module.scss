@@ -4,16 +4,49 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding: 60px 0 80px;
+    overflow: hidden;
+
+    @media screen and (min-width: 768px){
+        padding: 0;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40%;
+        background-image: url('/trees-silhouette.svg');
+        background-repeat: repeat-x;
+        background-position: bottom center;
+        background-size: auto 100%;
+        opacity: 0.15;
+        pointer-events: none;
+        z-index: 0;
+
+        @media screen and (min-width: 768px) {
+            height: 50%;
+            opacity: 0.2;
+        }
+    }
 }
 
 .personalWrapper {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     padding: 30px;
     gap: 30px;
     width: 100%;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+
+    @media screen and (min-width: 768px){
+        flex-direction: row;
+    }
 }
 
 .section {
@@ -27,6 +60,14 @@
 
         @media screen and (min-width: 992px){
             min-width: 500px;
+        }
+    }
+
+    &:last-of-type {
+        max-width: 280px;
+
+        @media screen and (min-width: 768px){
+            max-width: 365px;
         }
     }
 }

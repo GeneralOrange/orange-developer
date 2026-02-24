@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <!-- Background Layer - Furthest planes (lightest) -->
+  <g opacity="0.4">
+    <!-- Plane flying right-up with S-curve trail -->
+    <path d="M 30 235 Q 50 220, 65 215 T 100 200" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+    <path d="M100 200 L130 190 L105 210 L110 195 Z" fill="rgba(0, 128, 107, 0.25)" />
+    <path d="M100 200 L130 190 L125 200 Z" fill="rgba(255, 255, 255, 0.15)" />
+    
+    <!-- Plane flying with loop trail -->
+    <path d="M 1010 640 Q 1020 625, 1025 615 Q 1030 605, 1035 610 Q 1040 615, 1045 610 T 1050 600" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" fill="none" stroke-dasharray="6,4" transform="rotate(45 1035 600)"/>
+    <path d="M1050 600 L1020 590 L1045 610 L1040 595 Z" fill="rgba(0, 128, 107, 0.25)" transform="rotate(45 1035 600)" />
+    <path d="M1050 600 L1020 590 L1025 600 Z" fill="rgba(255, 255, 255, 0.15)" transform="rotate(45 1035 600)" />
+  </g>
+  
+  <!-- Middle Layer - Medium distance -->
+  <g opacity="0.6">
+    <!-- Plane flying diagonal with wave trail -->
+    <path d="M 400 285 Q 415 275, 425 270 Q 435 265, 440 268 Q 445 271, 450 265" stroke="rgba(255, 255, 255, 0.25)" stroke-width="2.5" fill="none" stroke-dasharray="8,4" transform="rotate(-25 425 275)"/>
+    <path d="M450 250 L490 245 L460 270 L468 250 Z" fill="rgba(0, 128, 107, 0.3)" transform="rotate(-25 470 257)" />
+    <path d="M450 250 L490 245 L485 257 Z" fill="rgba(255, 255, 255, 0.2)" transform="rotate(-25 470 257)" />
+    
+    <!-- Plane flying with S-curve -->
+    <path d="M 900 485 Q 915 475, 925 470 Q 935 465, 940 468 T 950 460" stroke="rgba(255, 255, 255, 0.25)" stroke-width="2.5" fill="none" stroke-dasharray="8,4" transform="rotate(150 925 472)"/>
+    <path d="M950 450 L915 458 L943 435 L935 453 Z" fill="rgba(0, 128, 107, 0.3)" transform="rotate(150 932 446)" />
+    <path d="M950 450 L915 458 L920 446 Z" fill="rgba(255, 255, 255, 0.2)" transform="rotate(150 932 446)" />
+  </g>
+  
+  <!-- Foreground Layer - Closest planes (most visible) -->
+  <g opacity="0.8">
+    <!-- Plane flying right-up with looping trail (large) -->
+    <path d="M 220 445 Q 235 430, 245 425 Q 255 420, 258 423 Q 261 426, 265 418 Q 269 410, 273 413 T 280 405" stroke="rgba(255, 255, 255, 0.35)" stroke-width="3" fill="none" stroke-dasharray="10,5" transform="rotate(25 250 425)"/>
+    <path d="M280 400 L330 390 L290 425 L302 395 Z" fill="rgba(0, 128, 107, 0.4)" transform="rotate(25 305 407)" />
+    <path d="M280 400 L330 390 L325 407 Z" fill="rgba(255, 255, 255, 0.3)" transform="rotate(25 305 407)" />
+    
+    <!-- Plane flying left with wave trail (large) -->
+    <path d="M 940 685 Q 930 675, 920 673 Q 910 671, 908 674 Q 906 677, 902 672" stroke="rgba(255, 255, 255, 0.35)" stroke-width="3" fill="none" stroke-dasharray="10,5" transform="rotate(160 921 678)"/>
+    <path d="M900 650 L860 660 L893 635 L883 655 Z" fill="rgba(0, 128, 107, 0.4)" transform="rotate(160 880 647)" />
+    <path d="M900 650 L860 660 L865 647 Z" fill="rgba(255, 255, 255, 0.3)" transform="rotate(160 880 647)" />
+  </g>
+</svg>

@@ -20,7 +20,6 @@ export default function ProjectOverview( props ) {
                 'JQuery',
                 'JavaScript'
             ],
-            url: 'https://crypto-valuta.nl',
             image: '/crypto-valuta.png'
         },
         {
@@ -37,7 +36,6 @@ export default function ProjectOverview( props ) {
                 'VueJS',
                 'Symfony'
             ],
-            url: 'https://voetbaluitslagen.com',
             image: '/voetbaluitslagen.png'	
         },
         {
@@ -50,7 +48,6 @@ export default function ProjectOverview( props ) {
                 'PHP',
                 'JavaScript'
             ],
-            url: 'https://www.fugamedia.nl/',
             image: '/fuga-media.png'	
         },
         {
@@ -103,20 +100,6 @@ export default function ProjectOverview( props ) {
             ],
             repo: 'https://github.com/GeneralOrange/meail-web',
             image: '/meali.jpeg'
-        },
-        {
-            id: 8,
-            name: 'Ewmaterialen',
-            description: 'Een webshop voor het verkopen van bepaalde items.',
-            stack: [
-                'WordPress',
-                'PHP',
-                'Woo Commerce',
-                'UnderStrap',
-                'JavaScript'
-            ],
-            image: '/ewmaterialen.png',
-            url: 'http://test.ewmaterialen.nl'
         }
     ];
 
@@ -132,10 +115,8 @@ export default function ProjectOverview( props ) {
 
             { props.show !== -1 && 
                 <FadeFromButtonUp>
-                    <Link href="/projecten">
-                        <a className={styles.button}>
+                    <Link href="/projecten" className={styles.button}>
                             Meer projecten <FaChevronRight />
-                        </a>
                     </Link>
                 </FadeFromButtonUp>
             }

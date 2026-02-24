@@ -9,31 +9,25 @@ export default function Socials() {
         <ul className={styles.list}>
             <li className={styles.linkedinList}>
                 <Link
-                    href="https://www.linkedin.com/in/erik-van-der-schaaf-202674167/">
-                        <a
-                            target="_blank"
-                            rel="nofollow">
+                    href="https://www.linkedin.com/in/erik-van-der-schaaf-202674167/"
+                    target="_blank"
+                    rel="nofollow">
                             <FaLinkedin className={styles.linkedin}/>
-                        </a>
                 </Link>
             </li>
             <li className={styles.githubList}>
                 <Link
-                    href="https://github.com/GeneralOrange">
-                        <a
-                            target="_blank"
-                            rel="nofollow">
+                    href="https://github.com/GeneralOrange"
+                    target="_blank"
+                    rel="nofollow">
                             <FaGithub className={styles.github}/>
-                        </a>
                 </Link>
             </li>
             <li className={styles.emailList}>
                 <Link
-                    href="mailto:erik.17021995@gmail.com">
-                        <a
-                            rel="nofollow">
+                    href="mailto:erik.17021995@gmail.com"
+                    rel="nofollow">
                             <FaEnvelope className={styles.mail}/>
-                        </a>
                 </Link>
             </li>
         </ul>
