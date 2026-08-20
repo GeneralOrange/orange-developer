@@ -12,13 +12,12 @@ export default function Personal() {
             <div className='container'>
                 <div className={styles.personalWrapper}>
                     <FadeLeftToRight className={styles.section}> 
-                        <span className={styles.subtitle}>Persoonlijk</span>
+                        <span className={styles.subtitle}>Profiel</span>
                         <span className={styles.title}>Dit is mijn verhaal</span>                    
                         <div className={styles.description}>
-                            Ik woon sinds 2023 in Waddinxveen, maar ben opgegroeid in Ter Aar. <br/>
-                            Hier heb ik veel vrienden wonen waar ik graag een biertje mee drink. <br/>
-                            Aan de andere kant probeer ik ook sportief te blijven en ga ik een rondje fietsen met m’n vader of ben ik te vinden in de sportschool. <br/>
-                            Als het gaat om hobbies hou ik er vooral van om lekker naar de film te gaan of om te gamen met vrienden.
+                            IT-professional met ervaring in webdevelopment, low-code en bedrijfsapplicaties. Begonnen als WordPress- en front-end developer en inmiddels werkzaam als Low-code Developer, waarbij de focus is verschoven van websites naar het ontwikkelen van applicaties en digitale oplossingen.<br/>
+                            Daarnaast ben ik medeoprichter van CuppaCode, waar ik samen met een compagnon digitale oplossingen ontwikkel voor klanten.<br/>
+                            Door mijn brede technische achtergrond kan ik goed schakelen tussen gebruikers, business en development. Ik krijg steeds meer energie van het analyseren van vraagstukken, het bedenken van oplossingen en het samenwerken met klanten en collega's.
                         </div>
                     </FadeLeftToRight>
                     <FadeRightToLeft className={styles.section}>
