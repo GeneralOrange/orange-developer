@@ -26,8 +26,8 @@ export default function Personal() {
                                 priority={true}
                                 src="/profile_forest_flexing.jpeg"
                                 alt="Profiel foto in het bos"
-                                width="365"
-                                height="483"/>
+                                width="280"
+                                height="371"/>
                         </ImageWrapper>
                     </FadeRightToLeft>
                 </div>

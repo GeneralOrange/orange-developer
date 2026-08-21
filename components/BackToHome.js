@@ -6,10 +6,8 @@ import styles from '../styles/BackToHome.module.scss'
 export default function BackToHome() {
   return (
       <>
-        <Link href="/">
-            <a className={ styles.back }>
+        <Link href="/" className={ styles.back }>
                 <FaChevronCircleLeft className={ styles.back__icon }/> Terug naar home
-            </a>
         </Link>
       </>
   )

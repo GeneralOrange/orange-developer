@@ -15,8 +15,8 @@ export default function Skills() {
             color: 'rgb(0, 128, 107)'
         },
         {
-            name: 'NuxtJS',
-            grade: 2,
+            name: 'WEM',
+            grade: 7,
             color: 'rgb(255, 173, 66)'
         },
         {
@@ -40,19 +40,14 @@ export default function Skills() {
             color: 'rgb(255, 173, 66)'
         },
         {
-            name: 'Strapi',
-            grade: 3,
+            name: 'Laravel',
+            grade: 7,
             color: 'rgb(0, 128, 107)'
-        },
-        {
-            name: 'Photoshop',
-            grade: 3,
-            color: 'rgb(255, 173, 66)'
         },
         {
             name: 'JavaScript',
             grade: 8,
-            color: 'rgb(0, 128, 107)'
+            color: 'rgb(255, 173, 66)'
         }
     ];
 

@@ -63,16 +63,12 @@ export default function ProjectItem(props) {
 
             <div className={styles.buttons}>
 
-                { item.url && <Link href={item.url}>
-                    <a target="_blank" rel="nofollow noopener" className={styles.button}>
+                { item.url && <Link href={item.url} target="_blank" rel="nofollow noopener" className={styles.button}>
                         Naar Website <FaChevronRight/>
-                    </a>
                 </Link> }
                 
-                { item.repo && <Link href={item.repo}>
-                    <a target="_blank" rel="nofollow noopener" className={styles.repoButton}>
+                { item.repo && <Link href={item.repo} target="_blank" rel="nofollow noopener" className={styles.repoButton}>
                         Naar Repo <FaServer/>
-                    </a>
                 </Link> }
 
             </div>

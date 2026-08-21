@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <!-- Background Layer - Furthest bubbles (lightest) -->
+  <g opacity="0.3">
+    <circle cx="100" cy="150" r="80" fill="rgba(255, 173, 66, 0.08)" />
+    <circle cx="950" cy="100" r="100" fill="rgba(255, 173, 66, 0.07)" />
+    <circle cx="300" cy="600" r="70" fill="rgba(255, 173, 66, 0.085)" />
+    <circle cx="1050" cy="650" r="90" fill="rgba(255, 173, 66, 0.08)" />
+    <circle cx="600" cy="200" r="65" fill="rgba(255, 173, 66, 0.075)" />
+    <circle cx="450" cy="700" r="75" fill="rgba(255, 173, 66, 0.08)" />
+  </g>
+  
+  <!-- Middle Layer - Medium distance -->
+  <g opacity="0.5">
+    <circle cx="200" cy="400" r="50" fill="rgba(255, 173, 66, 0.1)" />
+    <circle cx="750" cy="250" r="60" fill="rgba(255, 173, 66, 0.095)" />
+    <circle cx="500" cy="700" r="55" fill="rgba(255, 173, 66, 0.105)" />
+    <circle cx="850" cy="550" r="45" fill="rgba(255, 173, 66, 0.1)" />
+    <circle cx="1100" cy="400" r="50" fill="rgba(255, 173, 66, 0.095)" />
+    <circle cx="350" cy="150" r="48" fill="rgba(255, 173, 66, 0.1)" />
+  </g>
+  
+  <!-- Foreground Layer - Closest bubbles (most opaque) -->
+  <g opacity="0.7">
+    <circle cx="400" cy="200" r="30" fill="rgba(255, 173, 66, 0.12)" />
+    <circle cx="600" cy="450" r="35" fill="rgba(255, 173, 66, 0.115)" />
+    <circle cx="150" cy="700" r="25" fill="rgba(255, 173, 66, 0.125)" />
+    <circle cx="900" cy="350" r="30" fill="rgba(255, 173, 66, 0.12)" />
+    <circle cx="450" cy="100" r="28" fill="rgba(255, 173, 66, 0.118)" />
+    <circle cx="700" cy="600" r="32" fill="rgba(255, 173, 66, 0.122)" />
+    <circle cx="1000" cy="520" r="29" fill="rgba(255, 173, 66, 0.12)" />
+    <circle cx="250" cy="320" r="31" fill="rgba(255, 173, 66, 0.12)" />
+  </g>
+  
+  <!-- Very close - Tiny bubbles for texture (closest, most visible) -->
+  <g opacity="0.85">
+    <circle cx="250" cy="250" r="15" fill="rgba(255, 173, 66, 0.14)" />
+    <circle cx="550" cy="320" r="18" fill="rgba(255, 173, 66, 0.138)" />
+    <circle cx="800" cy="180" r="12" fill="rgba(255, 173, 66, 0.145)" />
+    <circle cx="350" cy="500" r="16" fill="rgba(255, 173, 66, 0.142)" />
+    <circle cx="1000" cy="280" r="14" fill="rgba(255, 173, 66, 0.14)" />
+    <circle cx="650" cy="120" r="15" fill="rgba(255, 173, 66, 0.138)" />
+    <circle cx="180" cy="550" r="13" fill="rgba(255, 173, 66, 0.143)" />
+    <circle cx="980" cy="720" r="17" fill="rgba(255, 173, 66, 0.14)" />
+    <circle cx="520" cy="500" r="14" fill="rgba(255, 173, 66, 0.14)" />
+    <circle cx="780" cy="420" r="16" fill="rgba(255, 173, 66, 0.142)" />
+  </g>
+</svg>

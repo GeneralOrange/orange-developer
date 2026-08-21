@@ -15,6 +15,9 @@ export default function Hero() {
     useEffect(()=> {
         const options = {
             strings: [
+                '<span style="color: rgb(45, 45, 45)">WEM</span>',
+                '<span style="color: rgb(45, 45, 45)">Vibe</span>',
+                '<span style="color: rgb(45, 45, 45)">Laravel</span>',
                 '<span style="color: rgb(45, 45, 45)">WordPress</span>',
                 '<span style="color: rgb(45, 45, 45)">PHP</span>',
                 '<span style="color: rgb(45, 45, 45)">JavaScript</span>',
